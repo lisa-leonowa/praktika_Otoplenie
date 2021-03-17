@@ -1,0 +1,15 @@
+{% extends "about.html" %}
+
+{% block content %}
+<div class="cont">
+    {% for item in all_company%}
+    <div class="block block_padding">
+        <div>Название компании: {{item[1]}}</div>
+        <div>Тариф: {{item[2]}} р.</div>
+        <div>Реквизиты: {{item[3]}}</div>
+        <div>ФИО Руководителя: {{item[4]}}</div>
+    </div>
+    <h1></h1>
+    {% endfor %}
+</div>
+{% endblock %}

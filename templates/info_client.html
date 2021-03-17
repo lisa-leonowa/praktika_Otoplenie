@@ -1,0 +1,22 @@
+{% extends "about.html" %}
+
+{% block content %}
+<div class="cont">
+    <div>
+        <div class="block block_padding">ФИО: {{item[0]}}</div>
+        <div class="block block_padding">Дата Рождения: {{item[1]}}</div>
+        <div class="block block_padding">Номер телефона: {{item[2]}}</div>
+        <div class="block block_padding">Паспортные данные: {{item[3]}}</div>
+        <div class="block block_padding">Пол: {{item[4]}}</div>
+        <div class="block block_padding">Адрес проживания: {{item[5]}}</div>
+        <div class="block block_padding">В квартире {{item[6]}} кв.м.</div>
+        {% if dlina > 7 %}
+        <div class="block block_padding">Счетчик: установлен</div>
+        <div class="block block_padding">Дата установки счетчика: {{item[7]}}</div>
+        <div class="block block_padding">Фирма счетчика: {{item[8]}}</div>
+        {% else %}
+        <div class="block block_padding">Счетчик: не установлен</div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

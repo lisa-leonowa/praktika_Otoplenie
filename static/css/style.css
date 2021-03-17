@@ -1,0 +1,116 @@
+.bordered-link {
+    width: 70%;
+    height: 90%;
+    display: inline-block;
+    padding: 8px;
+    border: 2px solid #9479fa;
+    border-radius: 6px;
+    box-shadow:
+        0 2px 1px rgba(0, 0, 0, 0.2),
+        inset 0 2px 1px rgba(0, 0, 0, 0.2);
+    /* Шрифт */
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #222;
+}
+
+.bordered-link:hover {
+    border-color: #FDD68B
+}
+
+.bordered-link:active {
+    border-color: #FEE8BD
+}
+
+.block{
+    padding: 5px;
+    margin: 30px;
+    -webkit-box-shadow: 5px 5px 20px 0px rgba(34, 60, 80, 0.3);
+    -moz-box-shadow: 5px 5px 20px 0px rgba(34, 60, 80, 0.3);
+    box-shadow: 5px 5px 20px 0px rgba(34, 60, 80, 0.3);
+}
+
+.block_align{
+    text-align: center;
+}
+
+a {
+    text-decoration: none; /* Отмена подчеркивание у ссылки */
+    color: #222;
+   }
+
+body{
+    position: fixed; /* or absolute */
+    top: 3%;
+    left: 13%;
+    width: 100%;
+    height: 100%;
+}
+.dobr{
+    padding: 5px;
+    margin: 30px;
+}
+
+.block_padding{
+    padding-left: 3%;
+}
+
+.style_btn{
+    background:linear-gradient(to bottom, #FFFFFF, #E6E6E6) #F5F5F5 repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #B3B3B3;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333333;
+        text-decoration:none;
+    display:block;
+    font-size: 14px;
+        width:120px;
+    line-height: 20px;
+    margin: 20px auto;
+    padding: 4px 12px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.style_btn:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
+}
+
+.style_btn:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+.style_btn:hover:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  -ms-transform: translateY(5px);
+  transform: translateY(5px);
+}

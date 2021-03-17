@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+</head>
+<body>
+<div class="bordered-link">
+    <div class="dobr block_align">
+        <div>{{title}}</div>
+        <br>
+        <div>{{message}}</div>
+    </div>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        {{ form.csrf_token }}
+        <div class="block block_padding">
+            {{ form.pasport.label }}
+            {{ form.pasport(class="form-control") }}
+            {% for error in form.pasport.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+        </div>
+        <div>{{ form.submit(type="submit", class="style_btn") }}</div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+</head>
+<body>
+<div class="bordered-link">
+    <div class="dobr block_align">
+        <div>{{title}}</div>
+        <div>{{message}}</div>
+    </div>
+    <form action="" method="post">
+        <div class="dobr block_align">Необоходимо ввести информацию о квартире для ранее добавленного собственника</div>
+        {{ form.hidden_tag() }}
+        {{ form.csrf_token }}
+        <div class="block block_padding">
+            {{ form.gorod.label }}
+            {{ form.gorod(class="form-control") }}
+            {% for error in form.gorod.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="block block_padding">
+            {{ form.street.label }}
+            {{ form.street(class="form-control") }}
+            {% for error in form.street.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="block block_padding">
+            {{ form.dom.label }}
+            {{ form.dom(class="form-control") }}
+            {% for error in form.dom.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="block block_padding">
+            {{ form.id_flat.label }}
+            {{ form.id_flat(class="form-control") }}
+            {% for error in form.id_flat.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="block block_padding">
+            {{ form.other_info.label }}
+            {{ form.other_info(class="form-control") }}
+            {% for error in form.other_info.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="block block_padding">
+            {{ form.temperatura.label }}
+            {{ form.temperatura(class="form-control") }}
+            {% for error in form.temperatura.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="block block_padding">
+            {{ form.schetchik.label }}
+            {{ form.schetchik(class="form-control") }}
+            {% for error in form.schetchik.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="block block_padding">
+            {{ form.company.label }}
+            {{ form.company(class="form-control") }}
+            {% for error in form.company.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+        </div>
+        <div>{{ form.submit(type="submit", class="style_btn") }}</div>
+    </form>
+</div>
+</body>
+</html>
