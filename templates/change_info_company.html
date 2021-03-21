@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+</head>
+<body>
+<div class="bordered-link">
+    <div class="dobr block_align">
+        <div>{{title}}</div>
+        <br>
+        <div class="block block_padding">В названии компании могут находиться только буквы!</div>
+        <br>
+        <div class="error">{{message}}</div>
+    </div>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        {{ form.csrf_token }}
+        <div class="block block_padding">
+            {{ form.nazv_old.label }}
+            {{ form.nazv_old(class="form-control") }}
+            {% for error in form.nazv_old.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="block block_padding">
+            {{ form.tariff.label }}
+            {{ form.tariff(class="form-control") }}
+            {% for error in form.tariff.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="block block_padding">
+            {{ form.recvizit.label }}
+            {{ form.recvizit(class="form-control") }}
+            {% for error in form.recvizit.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="block block_padding">
+            {{ form.fio_ruck.label }}
+            {{ form.fio_ruck(class="form-control") }}
+            {% for error in form.fio_ruck.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+        </div>
+        <div>{{ form.submit(type="submit", class="style_btn") }}</div>
+    </form>
+    <a href="/"><div class="block dobr block_align">Главное меню</div></a>
+</div>
+</body>
+</html>
