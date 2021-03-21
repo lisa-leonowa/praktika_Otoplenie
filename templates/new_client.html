@@ -10,7 +10,7 @@
     <div class="dobr block_align">
         <div>{{title}}</div>
         <br>
-        <div>{{message}}</div>
+        <div class="error">{{message}}</div>
     </div>
     <form action="" method="post">
         {{ form.hidden_tag() }}
@@ -62,6 +62,7 @@
         </div>
         <div>{{ form.submit(type="submit", class="style_btn") }}</div>
     </form>
+    <a href="/"><div class="block dobr block_align">Главное меню</div></a>
 </div>
 </body>
 </html>
