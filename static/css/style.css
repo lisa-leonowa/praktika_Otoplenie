@@ -1,6 +1,6 @@
 .bordered-link {
     width: 70%;
-    height: 90%;
+    height: 92%;
     display: inline-block;
     padding: 8px;
     border: 2px solid #9479fa;
@@ -41,7 +41,7 @@ a {
 
 body{
     position: fixed; /* or absolute */
-    top: 3%;
+    top: 2%;
     left: 13%;
     width: 100%;
     height: 100%;
@@ -113,4 +113,8 @@ body{
   -webkit-transform: translateY(5px);
   -ms-transform: translateY(5px);
   transform: translateY(5px);
+}
+
+.error {
+    color: #ff0000;
 }
