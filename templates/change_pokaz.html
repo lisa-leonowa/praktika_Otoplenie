@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+</head>
+<body>
+<div class="bordered-link">
+    <div class="dobr block_align">
+        <div>{{title}}</div>
+        <br>
+        <div>Для изменения показаний счетчика необходимо ввести паспортные данные собственника!</div>
+        <br>
+        <div class="error">{{message}}</div>
+    </div>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        {{ form.csrf_token }}
+        <div class="block block_padding">
+            {{ form.pasport.label }}
+            {{ form.pasport(class="form-control") }}
+            {% for error in form.pasport.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="block block_padding">
+            {{ form.pokaz.label }}
+            {{ form.pokaz(class="form-control") }}
+            {% for error in form.pokaz.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="block block_padding">
+            {{ form.month_pokaz.label }}
+            {{ form.month_pokaz(class="form-control") }}
+            {% for error in form.month_pokaz.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="block block_padding dobr block_align">Необходимо указывать показания за месяц, а не общие показания! Иначе счет за отопления будет неправильный!</div>
+        <div>{{ form.submit(type="submit", class="style_btn") }}</div>
+    </form>
+    <a href="/"><div class="block dobr block_align">Главное меню</div></a>
+</div>
+</body>
+</html>
